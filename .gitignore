@@ -130,5 +130,4 @@ dist
 .pnp.*
 
 #local storage
-scratch/user_playlists
-scratch/user_savedTracks
+.scratch/
