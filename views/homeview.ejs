@@ -4,40 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Spotify Songs' Specs</title>
-  <script>
-    let user_playlists = [];
-
-    async function savePlaylists(playlists) {
-      //let parsed_playlists = [...<%- JSON.parse(playlists)[0] %>] ;
-      for (let i = 0; i < parsed_playlists.length; i++) {
-        await user_playlists.push(parsed_playlists[0][i]);
-        //console.log(user_playlists.playlists[i][0]);
-      }
-    }
-
-    savePlaylists(<%- JSON.parse(playlists) %>);
-    console.log(user_playlists);
-  </script>
 </head>
 
 <body>
   <%- include("partials/header") -%>
   <h1>You're now on the home view!</h1>
   <h2>Playlists' Names</h2>
-  <!--<ul>
-    <% for(let i=0; i<playlists.length; i++){ %>
-    <li><%= playlists[i].name %></li>
-    <% } %>
-  </ul>-->
+
   <%- include("partials/footer") -%>
 
-  <h1><%= playlists[0][0].name %></h1>
-
+  <span id="variablesEJS" hidden style="display: none"><%- JSON.stringify(playlists); %>|<%- JSON.stringify(savedTracks); %></span>
   <script type="text/javascript" src="js/script.js"></script>
-  <script>
-    //console.log(`${<%- JSON.stringify(playlists[0][0].name) %>}`);
-    savePlaylists( < % -JSON.stringify(playlists[0]) % > );
-  </script>
   <script type="text/javascript" src="js/visualization.js"></script>
 
 </body>

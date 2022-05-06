@@ -115,7 +115,7 @@ app.route("/access")
             });
           }, function(err) {
             console.log('Something went wrong!', err);
-          }).then(function(total_playlists){
+          }).then(function(total_playlists) {
             let playlists;
             let savePlaylists = async function() {
               playlists = await getPlaylists(total_playlists, my_id, limit);
@@ -180,8 +180,8 @@ app.route("/homeview")
     //console.log("Tracks: " + JSON.parse(localStorage.user_savedTracks).length);
 
     res.render("homeview", {
-      playlists: localStorage.user_playlists,
-      savedTracks: localStorage.user_savedTracks
+      playlists: JSON.parse(localStorage.user_playlists)[0],
+      savedTracks: JSON.parse(localStorage.user_savedTracks)
     });
     //res.sendFile(__dirname + "/public/html/homeview.html");
   });
@@ -189,12 +189,15 @@ app.route("/homeview")
 //função para ir buscar e guardar as saved tracks do utilizador
 async function getSavedTracks(total_tracks, limit) {
   let n_iterations = Math.ceil(total_tracks / limit);
+  //console.log(n_iterations);
   for (let i = 0; i < n_iterations; i++) {
     await spotifyApi.getMySavedTracks({
         limit: limit,
         offset: i
       })
       .then(function(data) {
+        //console.log(i);
+        //console.log(data);
         let savedTracks = [];
         (data.body.items).map((track, j) => {
           if (user_savedTracks.length + savedTracks.length < total_tracks) {
@@ -243,7 +246,10 @@ async function getSavedTracks(total_tracks, limit) {
 async function getPlaylists(total_playlists, user_id, limit) {
   let n_iterations = Math.ceil(total_playlists / limit);
   for (let i = 0; i < n_iterations; i++) {
-    await spotifyApi.getUserPlaylists(user_id, {limit: limit, offset: i})
+    await spotifyApi.getUserPlaylists(user_id, {
+        limit: limit,
+        offset: i
+      })
       .then(function(data) {
         let playlists = [];
         (data.body.items).map((playlist, j) => {
