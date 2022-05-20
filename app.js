@@ -67,6 +67,8 @@ app.route("/auth")
 //-----------------------ACESSO À API DO SPOTIFY E REQUESIÇÃO DOS DADOS NECESSÁRIOS PARA IMPLEMENTAR A VISUALIZAÇÃO-----------------------
 app.route("/access")
   .get(function(req, res) {
+    localStorage.setItem('user_savedTracks', JSON.stringify([]));
+    localStorage.setItem('user_playlists', JSON.stringify([]));
     let code = req.query.code;
     //console.log("Code: " + code);
 
