@@ -10,71 +10,81 @@
           rel="stylesheet">
 </head>
 <body>
-<!--    CANTO SUPERIOR ESQUERDO    -->
-<div id="menu">
-    <!--    TITLE / ABOUT    -->
-    <h1 class="inline">Spotify Song's Specs 2.0</h1>
-    <img id="info_about" class="inline" src="../images/icon_info.png" height="116" width="116"/>
+<div id="esquerdo">
+    <!--    CANTO SUPERIOR ESQUERDO    -->
+    <div id="menu">
+        <!--    TITLE / ABOUT    -->
+        <h1 class="inline">Spotify Song's Specs 2.0</h1>
+        <img id="info_about" class="inline" src="../images/icon_info.png" height="116" width="116"/>
 
-    <!--    SWITCHES    -->
-    <div>
-        <div id="switch_years_playlist" class="inline">
-            <p class="inline">Years View</p>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
-            <p class="inline">Playlists View</p>
-        </div>
-
-        <div id="switch_global_detailed" class="inline">
-            <p class="inline">Global View</p>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
-            <p class="inline">Detailed View</p>
-        </div>
-    </div>
-
-    <!--    MENU GENRES    -->
-    <div id="menu_genres">
-        <p>Choose one or more to see with more detail:</p>
-        <div id="option_genres">
-            <div>
-                <div id="rock" class="inline">
-                    <span id="dot_rock" class="dot"></span>
-                    <p class="inline">Rock</p>
-                </div>
-                <div id="country" class="inline">
-                    <span id="dot_country" class="dot"></span>
-                    <p class="inline">Country</p>
-                </div>
-                <div id="funk" class="inline">
-                    <span id="dot_funk" class="dot"></span>
-                    <p class="inline">Funk</p>
-                </div>
-                <div id="indie" class="inline">
-                    <span id="dot_indie" class="dot"></span>
-                    <p class="inline">Indie</p>
-                </div>
+        <!--    SWITCHES    -->
+        <div>
+            <div id="switch_years_playlist" class="inline">
+                <p class="inline">Years View</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <p class="inline">Playlists View</p>
             </div>
-            <div>
-                <div id="rb" class="inline">
-                    <span id="dot_rb" class="dot"></span>
-                    <p class="inline">R&B</p>
+
+            <div id="switch_global_detailed" class="inline">
+                <p class="inline">Global View</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <p class="inline">Detailed View</p>
+            </div>
+        </div>
+
+        <!--    MENU GENRES    -->
+        <div id="menu_genres">
+            <p>Choose one or more to see with more detail:</p>
+            <div id="option_genres">
+                <div id="coluna1_genres">
+                    <div id="rock" class="inline">
+                        <span id="dot_rock" class="dot"></span>
+                        <p class="inline">Rock</p>
+                    </div>
+                    <br>
+                    <div id="country" class="inline">
+                        <span id="dot_country" class="dot"></span>
+                        <p class="inline">Country</p>
+                    </div>
                 </div>
-                <div id="jazz" class="inline">
-                    <span id="dot_jazz" class="dot"></span>
-                    <p class="inline">Jazz</p>
+                <div id="coluna2_genres">
+                    <div id="funk" class="inline">
+                        <span id="dot_funk" class="dot"></span>
+                        <p class="inline">Funk</p>
+                    </div>
+                    <br>
+                    <div id="indie" class="inline">
+                        <span id="dot_indie" class="dot"></span>
+                        <p class="inline">Indie</p>
+                    </div>
                 </div>
-                <div id="classical" class="inline">
-                    <span id="dot_classical" class="dot"></span>
-                    <p class="inline">Classical</p>
+                <div id="coluna3_genres">
+                    <div id="rb" class="inline">
+                        <span id="dot_rb" class="dot"></span>
+                        <p class="inline">R&B</p>
+                    </div>
+                    <br>
+                    <div id="jazz" class="inline">
+                        <span id="dot_jazz" class="dot"></span>
+                        <p class="inline">Jazz</p>
+                    </div>
                 </div>
-                <div id="pop" class="inline">
-                    <span id="dot_pop" class="dot"></span>
-                    <p class="inline">Pop</p>
+                <div id="coluna4_genres">
+                    <div id="classical" class="inline">
+                        <span id="dot_classical" class="dot"></span>
+                        <p class="inline">Classical</p>
+                    </div>
+                    <br>
+                    <div id="pop" class="inline">
+                        <span id="dot_pop" class="dot"></span>
+                        <p class="inline">Pop</p>
+                    </div>
                 </div>
                 <div id="all" class="inline">
                     <span id="dot_all" class="dot"></span>
@@ -83,111 +93,112 @@
             </div>
         </div>
     </div>
-</div>
 
-<!--    CANTO INFERIOR ESQUERDO    -->
-<div id="menu_global">
-    <div id="dropdown_global_close">
-        <p class="inline">Select the years that you want to compare</p>
-        <img id="seta_dropdown" class="inline" src="../images/seta.png" height="45" width="69"/>
-    </div>
-    <div id="dropdown_global_open">
-        <form action="/action_page.php"> <!--MODIFICAR PARA JAVASCRIPT-->
+    <!--    CANTO INFERIOR ESQUERDO    -->
+    <div id="menu_global">
+        <div id="dropdown_global_close">
+            <p class="inline">Select the years that you want to compare</p>
+            <img id="seta_dropdown" class="inline" src="../images/seta.png" height="45" width="69"/>
+        </div>
+        <div id="dropdown_global_open">
+            <form action="/action_page.php"> <!--MODIFICAR PARA JAVASCRIPT-->
+                <div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist1" name="playlist1" value="Bike">
+                        <label for="playlist1"> Playlist 1</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist2" name="playlist2" value="Car">
+                        <label for="playlist2"> Playlist 2</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist3" name="playlist3" value="Boat">
+                        <label for="playlist3"> Playlist 3</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                </div>
+                <div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist4" name="playlist4" value="Boat">
+                        <label for="playlist4"> Playlist 4</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist5" name="playlist5" value="Boat">
+                        <label for="playlist5"> Playlist 5</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist6" name="playlist6" value="Boat">
+                        <label for="playlist6"> Playlist 6</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                </div>
+                <div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist7" name="playlist7" value="Boat">
+                        <label for="playlist7"> Playlist 7</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist8" name="playlist8" value="Boat">
+                        <label for="playlist8"> Playlist 8</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                    <div class="inline">
+                        <input type="checkbox" id="playlist9" name="playlist9" value="Boat">
+                        <label for="playlist9"> Playlist 9</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
             <div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist1" name="playlist1" value="Bike">
-                    <label for="playlist1"> Playlist 1</label><br> <!--MUDAR NOME PLAYLIST CODE-->
+                <div>
+                    <div class="inline">
+                        <p>2013</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2014</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2015</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2016</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2017</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
                 </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist2" name="playlist2" value="Car">
-                    <label for="playlist2"> Playlist 2</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist3" name="playlist3" value="Boat">
-                    <label for="playlist3"> Playlist 3</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-            </div>
-            <div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist4" name="playlist4" value="Boat">
-                    <label for="playlist4"> Playlist 4</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist5" name="playlist5" value="Boat">
-                    <label for="playlist5"> Playlist 5</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist6" name="playlist6" value="Boat">
-                    <label for="playlist6"> Playlist 6</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-            </div>
-            <div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist7" name="playlist7" value="Boat">
-                    <label for="playlist7"> Playlist 7</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist8" name="playlist8" value="Boat">
-                    <label for="playlist8"> Playlist 8</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-                <div class="inline">
-                    <input type="checkbox" id="playlist9" name="playlist9" value="Boat">
-                    <label for="playlist9"> Playlist 9</label><br> <!--MUDAR NOME PLAYLIST CODE-->
-                </div>
-            </div>
-            <input type="submit" value="Submit">
-        </form>
-        <div>
-            <div>
-                <div class="inline">
-                    <p>2013</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2014</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2015</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2016</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2017</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-            </div>
-            <div>
-                <div class="inline">
-                    <p>2018</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2019</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2020</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2021</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
-                </div>
-                <div class="inline">
-                    <p>2022</p> <!--MUDAR ANO CODE-->
-                    <span></span> <!--D3-->
+                <div>
+                    <div class="inline">
+                        <p>2018</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2019</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2020</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2021</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
+                    <div class="inline">
+                        <p>2022</p> <!--MUDAR ANO CODE-->
+                        <span></span> <!--D3-->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="menu_detail">
 
+    <div id="menu_detail">
+
+    </div>
 </div>
 
 <!--    DIREITA    -->
@@ -214,9 +225,9 @@
             <option value="popularity">Popularity</option>
             <option value="liveness">Liveness</option>
             <option value="energy">Energy</option>
-            <option value="acousticness ">Acousticness </option>
-            <option value="danceability ">Danceability </option>
-            <option value="valence ">Valence </option>
+            <option value="acousticness ">Acousticness</option>
+            <option value="danceability ">Danceability</option>
+            <option value="valence ">Valence</option>
         </select>
         <input type="submit" value="Submit">
     </form>
@@ -227,17 +238,17 @@
             <option value="popularity">Popularity</option>
             <option value="liveness">Liveness</option>
             <option value="energy">Energy</option>
-            <option value="acousticness ">Acousticness </option>
-            <option value="danceability ">Danceability </option>
-            <option value="valence ">Valence </option>
+            <option value="acousticness ">Acousticness</option>
+            <option value="danceability ">Danceability</option>
+            <option value="valence ">Valence</option>
         </select>
         <input type="submit" value="Submit">
     </form>
     <span></span><!--D3-->
     <img id="agulha" src="../images/agulha.png" height="1682" width="132"/>
     <div>
-    <h3 class="inline">Tracks’ popularity</h3><!--MUDAR ANO CODE-->
-    <img id="info_track" class="inline" src="../images/icon_info.png" height="116" width="116"/>
+        <h3 class="inline">Tracks’ popularity</h3><!--MUDAR ANO CODE-->
+        <img id="info_track" class="inline" src="../images/icon_info.png" height="116" width="116"/>
     </div>
 </div>
 

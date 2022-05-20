@@ -34,6 +34,8 @@ body{
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: row;
 }
 
 .inline{
@@ -42,6 +44,12 @@ body{
 
 /*    CANTO SUPERIOR ESQUERDO    */
 
+#esquerdo{
+  display: inline-block;
+  width: 50vw;
+  height: 100vh;
+}
+
 /*    ABOUT    */
 #info_about, #info_track{
   width: 20px;
@@ -49,11 +57,16 @@ body{
 }
 
 /*    SWITCH    */
+
+#switch_years_playlist, #switch_global_detailed{
+  margin-right: 50px;
+}
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 50px;
+  height: 24px;
 }
 
 .switch input {
@@ -77,8 +90,8 @@ body{
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -101,6 +114,10 @@ input:checked + .slider:before {
 }
 
 /*    MENU GENRES    */
+#menu{
+  height: 40vh;
+  background-color: #0D9BF2;
+}
 .dot{
   height: 20px;
   width: 20px;
@@ -135,7 +152,20 @@ input:checked + .slider:before {
   background-color: #FFFFFF;
 }
 
+#coluna1_genres, #coluna2_genres, #coluna3_genres, #coluna4_genres{
+  display: inline-block;
+  width: content-box;
+}
+
+#rock, #country, #funk, #indie, #rb, #jazz, #classical, #pop, #all{
+  margin-right: 30px;
+}
+
 /*    CANTO INFERIOR ESQUERDO    */
+#menu_global{
+  height: 60vh;
+  background-color: #28AE57;
+}
 
 /*    DROPDOWN    */
 #dropdown_global_close{
@@ -151,4 +181,15 @@ input:checked + .slider:before {
 #agulha{
   height: 400px;
   width: auto;
+}
+
+#global{
+  display: inline-block;
+  background-color: #9E64F7;
+  width: 50vw;
+  height: 100vh;
+}
+
+#detail{
+  display: none;
 }
